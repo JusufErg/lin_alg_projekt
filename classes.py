@@ -36,3 +36,5 @@ class måltid:
         # OPTIMERINGSALGORITM KÖR
 
         pass
+
+    #aldin var här
