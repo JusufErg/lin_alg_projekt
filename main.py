@@ -1,26 +1,36 @@
+import time as t
 import classes as cl
 
 allaIngridienser = []
 
 def finnsMaltid(allaMaltider):
-    textAnswer = input("Skriv måltid du önskar att redigera:")
+    truePosition = 0
+    textAnswer = input("Skriv måltid: ")
     answer = 0
+    iteration = -1
     for each in allaMaltider:
+        iteration = iteration + 1
         if textAnswer == each.namn:
             answer = 1
-    return answer,textAnswer
+            truePosition = iteration
+
+    return answer,textAnswer,truePosition
 
 def finnsIngridiens():
-    textAnswer = input("Skriv ingridiens:")
+    truePosition = 0
+    textAnswer = input("Skriv ingridiens: ")
     answer = 0
+    iteration = -1
     for each in allaIngridienser:
-        if textAnswer == each.namn
+        if textAnswer == each.namn:
             answer = 1
-    return answer,textAnswer
+            truePosition = iteration
+    return answer,textAnswer,truePosition
 
 def main():
     allaMaltider = []
     while True:
+        t.sleep(4)
         for a in range(4):
             print(" ")
         print("---------")
@@ -35,26 +45,45 @@ def main():
         svar = int(input("Alternativ"))
         if svar in range(0,7):
             if svar == 1:
+                print("LISTA AV INGRIDIENSER:")
                 for each in allaIngridienser:
                     print(each)
+
             elif svar == 2:
+                print("LISTA AV MÅLTIDER:")
                 for each in allaMaltider:
                     print(each)
+                    for eacheach in each.ingridienser:
+                        z = "    " + eacheach
+                        print(z)
+
             elif svar == 3:
-                if finnsMaltid(allaMaltider)[0] == 0:
-                    allaMaltider.append(cl.måltid(allaMaltider[1]))
+                svarMaltid = finnsMaltid(allaMaltider)
+                if svarMaltid[0] == 0:
+                    allaMaltider.append(cl.måltid(svarMaltid[1]))
+                    print("MÅLTID TILLAGD")
                 else:
                     print("Måltid fanns redan registrerad bitch")
+
             elif svar == 4:
-                if finnsMaltid(allaMaltider)[0] == 1:
-                    if finnsIngridiens()[0] == 1:
+                svarMaltid = finnsMaltid(allaMaltider)
+                if svarMaltid[0] == 1:
+                    svaringridiens = finnsIngridiens()
+                    if svaringridiens[0] == 1:
+                        allaMaltider[svaringridiens[2]].laggTillIngridiens(svaringridiens[2])
 
             elif svar == 5:
-                if finnsMaltid(allaMaltider)[0] == 1:
-                    if finnsIngridiens()[0] == 1:
+                svarMaltid = finnsMaltid(allaMaltider)
+                if svarMaltid[0] == 1:
+                    svaringridiens = finnsIngridiens()
+                    if svaringridiens[0] == 1:
+                        allaMaltider[svaringridiens[2]].taBortIngridiens(svaringridiens[2])
 
             elif svar == 6:
-                if finnsMaltid(allaMaltider)[0] == 1:
+                svarMaltid = finnsMaltid(allaMaltider)
+                if svarMaltid[0] == 1:
+                    allaMaltider[2].optimera()
+
         else:
             continue
 
