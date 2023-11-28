@@ -56,6 +56,7 @@ def main():
                     for eacheach in each.ingridienser:
                         z = "    " + eacheach
                         print(z)
+                    print(" ")
 
             elif svar == 3:
                 svarMaltid = finnsMaltid(allaMaltider)

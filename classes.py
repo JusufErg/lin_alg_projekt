@@ -33,6 +33,7 @@ class måltid:
 
     def optimera(self):
 
+
         # OPTIMERINGSALGORITM KÖR
 
         pass
