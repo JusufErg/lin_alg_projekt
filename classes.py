@@ -33,6 +33,19 @@ class måltid:
 
     def optimera(self):
 
+        # i "krav" så ska hur mycket av varje näringsvärde finnas
+
+        naringsKrav = [1,5,3]
+        minimiseraKostnad = []
+        scalVitaminA = []
+        scalVitaminB = []
+        scalVitaminC = []
+        for ing in self.ingridienser:
+            minimiseraKostnad.append(ing.kostnad)
+            scalVitaminA.append(ing.vitaminA)
+            scalVitaminB.append(ing.vitaminB)
+            scalVitaminC.append(ing.vitaminC)
+
 
         # OPTIMERINGSALGORITM KÖR
 
