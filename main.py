@@ -1,36 +1,45 @@
 import time as t
 import classes as cl
 
-allaIngridienser = []
+testingridiens1 = cl.ingrediens("test1",20,1,0,12)
+testingridiens2 = cl.ingrediens("test2",50,7,2,0)
+testingridiens3 = cl.ingrediens("test3",30,5,1,7)
+allaIngridienser = [testingridiens1,testingridiens2,testingridiens3]
+
+
 
 def finnsMaltid(allaMaltider):
     truePosition = 0
     textAnswer = input("Skriv måltid: ")
     answer = 0
     iteration = -1
+    trueAnswer = None
     for each in allaMaltider:
         iteration = iteration + 1
         if textAnswer == each.namn:
             answer = 1
             truePosition = iteration
+            trueAnswer = each
 
-    return answer,textAnswer,truePosition
+    return answer,textAnswer,truePosition,trueAnswer
 
 def finnsIngridiens():
     truePosition = 0
     textAnswer = input("Skriv ingridiens: ")
     answer = 0
     iteration = -1
+    trueAnswer = None
     for each in allaIngridienser:
+        iteration = iteration + 1
         if textAnswer == each.namn:
             answer = 1
             truePosition = iteration
-    return answer,textAnswer,truePosition
+            trueAnswer = each
+    return answer,textAnswer,truePosition,trueAnswer
 
 def main():
     allaMaltider = []
     while True:
-        t.sleep(4)
         for a in range(4):
             print(" ")
         print("---------")
@@ -53,8 +62,9 @@ def main():
                 print("LISTA AV MÅLTIDER:")
                 for each in allaMaltider:
                     print(each)
-                    for eacheach in each.ingridienser:
-                        z = "    " + eacheach
+                    listI = each.ingridienser
+                    for doe in listI:
+                        z = " --- " + doe.namn
                         print(z)
                     print(" ")
 
@@ -69,25 +79,28 @@ def main():
             elif svar == 4:
                 svarMaltid = finnsMaltid(allaMaltider)
                 if svarMaltid[0] == 1:
-                    svaringridiens = finnsIngridiens()
-                    if svaringridiens[0] == 1:
-                        allaMaltider[svaringridiens[2]].laggTillIngridiens(svaringridiens[2])
+                    svarIngridiens = finnsIngridiens()
+                    if svarIngridiens[0] == 1:
+                        print("Ingridiens tillagd")
+                        allaMaltider[svarMaltid[2]].laggTillIngridiens(svarIngridiens[3])
+                    else:
+                        print("misslyckades")
 
             elif svar == 5:
                 svarMaltid = finnsMaltid(allaMaltider)
                 if svarMaltid[0] == 1:
-                    svaringridiens = finnsIngridiens()
-                    if svaringridiens[0] == 1:
-                        allaMaltider[svaringridiens[2]].taBortIngridiens(svaringridiens[2])
+                    svarIngridiens = finnsIngridiens()
+                    if svarIngridiens[0] == 1:
+                        allaMaltider[svarIngridiens[2]].taBortIngridiens(svarIngridiens[3])
 
             elif svar == 6:
                 svarMaltid = finnsMaltid(allaMaltider)
                 if svarMaltid[0] == 1:
                     allaMaltider[2].optimera()
+                else:
+                    print("Hittade ej måltid")
 
         else:
             continue
 
 main()
-
-#snopp

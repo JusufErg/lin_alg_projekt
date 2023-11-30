@@ -25,11 +25,11 @@ class måltid:
         return f"{self.namn}"
 
     def laggTillIngridiens(self, ingridiens):
-        if type(ingridiens) == "ingrediens":
-            self.ingridienser.append(ingridiens)
+        #if type(ingridiens) == "ingrediens":
+        self.ingridienser.append(ingridiens)
     def taBortIngridiens(self, ingridiens):
-        if type(ingridiens) == "ingrediens":
-            self.ingridienser.remove(ingridiens)
+        #if type(ingridiens) == "ingrediens":
+        self.ingridienser.remove(ingridiens)
 
     def optimera(self):
 
@@ -42,10 +42,14 @@ class måltid:
         scalVitaminC = []
         for ing in self.ingridienser:
             minimiseraKostnad.append(ing.kostnad)
-            scalVitaminA.append(ing.vitaminA)
-            scalVitaminB.append(ing.vitaminB)
-            scalVitaminC.append(ing.vitaminC)
-        opt = scipy.linprog(c=minimiseraKostnad, A_ub=)
+            scalVitaminA.append((-1)*(ing.vitaminA))
+            scalVitaminB.append((-1)*(ing.vitaminB))
+            scalVitaminC.append((-1)*ing.vitaminC)
+        totalKombination = [scalVitaminA, scalVitaminB, scalVitaminC]
+        totalNaringsKrav = []
+        for each in naringsKrav:
+            totalNaringsKrav.append((-1)*each)
+        opt = scipy.linprog(c=minimiseraKostnad, A_ub=totalKombination, B_ub=totalNaringsKrav,method="reversed simplex")
 
 
 
