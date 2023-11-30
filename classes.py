@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy
+from scipy.optimize import linprog
 
 class ingrediens:
 
@@ -35,7 +36,7 @@ class måltid:
 
         # i "krav" så ska hur mycket av varje näringsvärde finnas
 
-        naringsKrav = [1,5,3]
+        naringsKrav = [100,500,300]
         minimiseraKostnad = []
         scalVitaminA = []
         scalVitaminB = []
@@ -49,8 +50,8 @@ class måltid:
         totalNaringsKrav = []
         for each in naringsKrav:
             totalNaringsKrav.append((-1)*each)
-        opt = scipy.linprog(c=minimiseraKostnad, A_ub=totalKombination, B_ub=totalNaringsKrav,method="reversed simplex")
-
+        opt = linprog(c=minimiseraKostnad, A_ub=totalKombination, b_ub=totalNaringsKrav, method="revised simplex")
+        print(opt)
 
 
         # OPTIMERINGSALGORITM KÖR

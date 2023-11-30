@@ -38,7 +38,15 @@ def finnsIngridiens():
     return answer,textAnswer,truePosition,trueAnswer
 
 def main():
+
+    # Skapar en exempelmåltid som heter "bajs" för att snabbt kunna göra experiment på
     allaMaltider = []
+    pre_defined_maltid = cl.måltid("bajs")
+    pre_defined_maltid.laggTillIngridiens(testingridiens1)
+    pre_defined_maltid.laggTillIngridiens(testingridiens2)
+    pre_defined_maltid.laggTillIngridiens(testingridiens3)
+    allaMaltider.append(pre_defined_maltid)
+
     while True:
         for a in range(4):
             print(" ")
@@ -96,7 +104,7 @@ def main():
             elif svar == 6:
                 svarMaltid = finnsMaltid(allaMaltider)
                 if svarMaltid[0] == 1:
-                    allaMaltider[2].optimera()
+                    allaMaltider[svarMaltid[2]].optimera()
                 else:
                     print("Hittade ej måltid")
 
