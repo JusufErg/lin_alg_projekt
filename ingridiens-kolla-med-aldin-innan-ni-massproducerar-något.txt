@@ -1,0 +1,60 @@
+Näringsämne (enhet)	Äggröra	DRI	% av DRI
+Vikt standard (g)	100		
+Energi (kcal)	189	2000	9.5
+Energi (kJ)	793	8400	9.4
+Fett, totalt (g)	15.5	70	22.1
+Protein (g)	11.9	50	23.8
+Kolhydrater, tillgängliga (g)	1	260	0.4
+Fibrer (g)	0	-	-
+Vatten (g)	69.4	-	-
+Alkohol (g)	0	-	-
+Aska (g)	1.7	-	-
+Sockerarter, totalt (g)	1.1	90	1.2
+Monosackarider (g)	0.4	-	-
+Disackarider (g)	0.7	-	-
+Tillsatt socker (g)	0	-	-
+Fritt socker (g)	0	-	-
+Summa mättade fettsyror (g)	3.2	20	16
+Fettsyra 4:0-10:0 (g)	0	-	-
+Laurinsyra C12:0 (g)	0	-	-
+Myristinsyra C14:0 (g)	0.1	-	-
+Palmitinsyra C16:0 (g)	2.2	-	-
+Stearinsyra C18:0 (g)	0.8	-	-
+Arakidinsyra C20:0 (g)	0	-	-
+Summa enkelomättade fettsyror (g)	7.3	-	-
+Palmitoljesyra C16:1 (g)	0.2	-	-
+Oljesyra C18:1 (g)	6.9	-	-
+Summa fleromättade fettsyror (g)	3.2	-	-
+Linolsyra C18:2 (g)	2.4	-	-
+Linolensyra C18:3 (g)	0.5	-	-
+Arakidonsyra C20:4 (g)	0.1	-	-
+EPA (C20:5) (g)	0	-	-
+DPA (C22:5) (g)	0	-	-
+DHA (C22:6) (g)	0.1	-	-
+Tiamin (mg)	0.07	1.1	6.3
+Riboflavin (mg)	0.38	1.4	26.9
+Niacin (mg)	0.01	16	0.1
+Niacinekvivalenter (NE/mg)	3.02	-	-
+Vitamin B6 (mg)	0.09	1.4	6.4
+Folat (µg)	57.1	-	-
+Vitamin B12 (µg)	1.38	2.5	55.1
+Vitamin C (mg)	0.1	80	0.1
+Vitamin A (RE/µg)	229.7	800	28.7
+Retinol (µg)	228.7	-	-
+Betakaroten/β-Karoten (µg)	9	-	-
+Vitamin D (µg)	3.33	5	66.6
+Vitamin E (mg)	6.8	12	56.9
+Vitamin K (µg)	värde saknas	-	-
+Fosfor, P (mg)	187	700	26.7
+Jod, I (µg)	81.7	150	54.5
+Järn, Fe (mg)	1.6	14	11.3
+Kalcium, Ca (mg)	67	800	8.4
+Kalium, K (mg)	146	2000	7.3
+Magnesium, Mg (mg)	13	375	3.4
+Natrium, Na (mg)	474	-	-
+Salt, NaCl (g)	1.2	6	20.4
+Selen, Se (µg)	21.4	55	38.9
+Zink, Zn (mg)	1.3	10	12.8
+Kolesterol (mg)	318.4	-	-
+Fullkorn totalt (g)	0	-	-
+Avfall (skal etc.) (%)	10	-	-
