@@ -45,6 +45,8 @@ class måltid:
             scalVitaminA.append(ing.vitaminA)
             scalVitaminB.append(ing.vitaminB)
             scalVitaminC.append(ing.vitaminC)
+        opt = scipy.linprog(c=minimiseraKostnad, A_ub=)
+
 
 
         # OPTIMERINGSALGORITM KÖR
