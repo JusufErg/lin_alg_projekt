@@ -51,6 +51,8 @@ class måltid:
             totalNaringsKrav.append((-1)*each)
         opt = linprog(c=minimiseraKostnad, A_ub=totalKombination, b_ub=totalNaringsKrav, method="revised simplex")
         print(opt)
+        print("hej")
+        print(type(opt))
 
 
         # OPTIMERINGSALGORITM KÖR
