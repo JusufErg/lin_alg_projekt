@@ -1,4 +1,3 @@
-import time as t
 import classes as cl
 
 testingridiens1 = cl.ingrediens("test1",20,1,0,12)
