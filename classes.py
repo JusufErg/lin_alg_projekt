@@ -49,6 +49,14 @@ class måltid:
         totalNaringsKrav = []
         for each in naringsKrav:
             totalNaringsKrav.append((-1)*each)
+
+        print("minkost:")
+        print(minimiseraKostnad)
+        print("totKomb:")
+        print(totalKombination)
+        print("tot när:")
+        print(totalNaringsKrav)
+
         opt = linprog(c=minimiseraKostnad, A_ub=totalKombination, b_ub=totalNaringsKrav, method="revised simplex")
         print(opt)
         print("hej")
